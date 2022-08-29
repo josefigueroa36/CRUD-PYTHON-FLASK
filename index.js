@@ -6,3 +6,8 @@ function cerrarModal(){
     htmlModal = document.getElementById("modal");
     htmlModal.setAttribute("class", "modale");
 }
+
+
+function abrir(){
+    let A;
+}
