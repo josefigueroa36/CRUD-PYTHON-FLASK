@@ -10,4 +10,5 @@ function cerrarModal(){
 
 function abrir(){
     let A;
+    let B;
 }
