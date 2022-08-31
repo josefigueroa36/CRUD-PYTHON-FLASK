@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -36,39 +38,24 @@
     </nav>
 
     <h1>Gestio de clientes</h1>
-    <a onclick="agregarCliente()" id="btnAgregar" 
+    <a onclick="agregar()" id="btnAgregar" 
     class="myButton">Agregar cliente</a>
     
     <table id="customers">
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Acciones</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        
+        <tbody>
 
-        <tr>
-            <td>Jose</td>
-            <td>Figueroa</td>
-            <td>jajajs@gmail.com</td>
-            <td>35158855</td>
-            <td>
-                <a href="#" class="btnDelete">Eliminar</a>
-                <a href="#" class="myButton">Editar</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Benito</td>
-            <td>Romero</td>
-            <td>jromoe@gmail.com</td>
-            <td>30445855</td>
-
-            <td>
-                <a href="#" class="btnDelete">Eliminar</a>
-                <a href="#" class="myButton">Editar</a>
-            </td>
-        </tr>
+        </tbody>
+        
     </table>
 <!-- Modal -->
 <div id="modal" class="modale" aria-hidden="true">
@@ -80,22 +67,29 @@
       </div>
       
       <div class="modal-body">
-        <input type="text" name="u" placeholder="Nombre" size="20"/><br>
+        <input id="txtId" type="hidden" 
+        placeholder="id" size="20"/><br>
+
+        <input id="txtFirsname" type="text" 
+        placeholder="Nombre" size="20"/><br>
         
-        <input type="text" name="u" placeholder="Apellido" size="20"/><br>
+        <input id="txtLastname" type="text" 
+        placeholder="Apellido" size="20"/><br>
         
-        <input type="text" name="u" placeholder="Telefono" size="20"/><br>
+        <input id="txtPhone" type="text" 
+        placeholder="Telefono" size="20"/><br>
         
-        <input type="text" name="u" placeholder="Email" size="20"/><br>
+        <input id="txtEmail" type="text" 
+        placeholder="Email" size="20"/><br>
+
+        <input id="txtAddress" type="text" 
+        placeholder="Direccion" size="20"/><br>
         
       <div class="modal-footer">
-    
-  
-        <a href="#" class="btn" id="btn_ingresar">Guardo</a>
+        <a onclick="save()" class="btn" id="btn_ingresar">Guardo</a>
       </div>
     </div>
   </div>
-  <script src="index.js"></script>
 </body>
 
 </html>
